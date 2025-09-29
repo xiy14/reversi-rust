@@ -171,7 +171,7 @@ fn reversi(board: &mut [[char; 8]; 8],player:char,row:u8,col:u8){
                 temp.push((check_x as usize, check_y as usize));
             } else if board[check_x as usize][check_y as usize] == player{
                 for (temp_x, temp_y) in temp{
-                    // reversi opponent
+                    // reversi stored opponent
                     board[temp_x][temp_y] = player;
                 }
                 break;
@@ -184,6 +184,7 @@ fn reversi(board: &mut [[char; 8]; 8],player:char,row:u8,col:u8){
     }
 }
 
+// termination stage
 fn termination(board: &[[char; 8]; 8]){
     let mut b_num = 0;
     let mut w_num = 0;
